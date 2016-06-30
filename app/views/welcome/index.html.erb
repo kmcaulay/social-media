@@ -1,29 +1,5 @@
 <h1>Media Minder</h1>
-<div id="sign-in">
-	<h3>Sign In!</h3>
-	<%= form_tag new_session_path do %>
-		<%= label_tag :username %>
-		<%= text_field_tag :username %>
-		<br>
-		<%= label_tag :password %>
-		<%= password_field_tag :password %>
-		<br>
-		<%= submit_tag "Log In" %>
-	<% end %>
-</div>
 
-<div id="sign-up">
-	<h3>Sign Up!</h3>
-	<%= form_for @user do |f| %>
-		<%= f.label :username %>
-		<%= f.text_field :username %>
-		<br>
-		<%= f.label :email %>
-		<%= f.email_field :email %>
-		<br>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-		<br>
-		<%= f.submit "Join!"%>
-	<% end %>
-</div>
+<%= render 'form1' %>
+
+<%= render 'form2' %>

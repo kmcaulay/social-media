@@ -23,7 +23,9 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id]).destroy
     session.clear
-    redirect_to welcome_index_path
+    if @user.destroy
+      redirect_to welcome_index_path
+    end
   end
 
   private
