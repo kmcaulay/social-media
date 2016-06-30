@@ -1,0 +1,28 @@
+<div id="edit-info">
+	<h1>Update Your Information</h1>
+	<!-- edit account here -->
+	<%= form_for(current_user) do |f| %>
+
+		<%= f.label :username %>
+		<%= f.text_field :username %>
+
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.submit "Save Changes" %>
+	<% end %>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<h3>Delete Account</h3>
+	<br>
+	<!-- Delete account below -->
+	<%= button_to "Delete", user_path(current_user), method: :delete %>
+</div>

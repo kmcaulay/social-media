@@ -1,0 +1,8 @@
+<div class="user-info">
+	<h1><%= @users.username%></h1>
+	<h5><%= @users.email %></h5>
+	<!-- edit user profile -->
+	<% if current_user %>
+		<%= link_to "Edit Profile", edit_user_path(current_user)%>
+	<% end %>
+</div>
