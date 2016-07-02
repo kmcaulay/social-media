@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   			#successful login
   		else
   			flash[:danger] = "Invalid email/password combination"
-  			redirect_to users_path
+  			redirect_to welcome_index_path
   		end
   end
 

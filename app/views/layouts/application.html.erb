@@ -8,17 +8,21 @@
 </head>
 <body>
 <header id="nav">
+	<% if !current_user %>
+		<h1>Welcome to SocMedia!</h1>
+	<% else %>
 		<h1><%= link_to "Home", users_path %></h1>
 		<div class="user-nav">
 			<% if current_user %>
 				<h2>Hello <%=current_user.username %>!
 				| <%= link_to "Sign Out", destroy_session_path, method: :delete %>
-				
 				| <%= link_to "Profile", current_user %></h2>
 			<% end %>
 		</div>
+	<% end %>
 	</header>
 <%= yield %>
-
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 </body>
 </html>
