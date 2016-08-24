@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
+gem 'itunes-search-api'
+gem 'httparty'
+gem 'paperclip'
+gem 'pry'
+gem 'devise'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

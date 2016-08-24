@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   			redirect_to user_path(@user)
   			#successful login
   		else
-  			flash[:danger] = "Invalid email/password combination"
+  			flash[:alert] = "Invalid email/password combination"
   			redirect_to welcome_index_path
   		end
   end
@@ -14,5 +14,6 @@ class SessionsController < ApplicationController
   def destroy
   	session[:user_id] = nil
   	redirect_to welcome_index_path
+    flash[:alert] = "Log Out Successful"
   end
 end
